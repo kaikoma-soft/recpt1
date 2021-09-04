@@ -9,7 +9,7 @@
 
 /* globals */
 boolean f_exit = FALSE;
-char  bs_channel_buf[8];
+char  bs_channel_buf[16];
 ISDB_T_FREQ_CONV_TABLE isdb_t_conv_set = { 0, CHTYPE_SATELLITE, 0, bs_channel_buf };
 
 
@@ -195,34 +195,13 @@ show_channels(void)
     else
         fprintf(stderr, "13-62: Terrestrial Channels\n");
 
-    fprintf(stderr, "BS01_0: BS朝日\n");
-    fprintf(stderr, "BS01_1: BS-TBS\n");
-    fprintf(stderr, "BS01_2: BSジャパン\n");
-    fprintf(stderr, "BS03_0: WOWOWプライム\n");
-    fprintf(stderr, "BS03_1: NHK BSプレミアム\n");
-    fprintf(stderr, "BS03_2: ディズニーチャンネル\n");
-    fprintf(stderr, "BS05_0: WOWOWライブ\n");
-    fprintf(stderr, "BS05_1: WOWOWシネマ\n");
-    fprintf(stderr, "BS09_0: BS11\n");
-    fprintf(stderr, "BS09_1: スターチャンネル1\n");
-    fprintf(stderr, "BS09_2: TwellV\n");
-    fprintf(stderr, "BS11_1: BSスカパー!\n");
-    fprintf(stderr, "BS11_2: 放送大学\n");
-    fprintf(stderr, "BS11_3: BS釣りビジョン\n");
-    fprintf(stderr, "BS13_0: BS日テレ\n");
-    fprintf(stderr, "BS13_1: BSフジ\n");
-    fprintf(stderr, "BS13_2: BSアニマックス\n");
-    fprintf(stderr, "BS15_1: NHK BS1\n");
-    fprintf(stderr, "BS15_2: スターチャンネル2/3\n");
-    fprintf(stderr, "BS19_0: J SPORTS 4\n");
-    fprintf(stderr, "BS19_1: J SPORTS 1\n");
-    fprintf(stderr, "BS19_2: J SPORTS 2\n");
-    fprintf(stderr, "BS19_3: J SPORTS 3\n");
-    fprintf(stderr, "BS21_0: IMAGICA BS\n");
-    fprintf(stderr, "BS21_1: 日本映画専門チャンネル\n");
-    fprintf(stderr, "BS21_2: グリーンチャンネル\n");
-    fprintf(stderr, "C13-C63: CATV Channels\n");
-    fprintf(stderr, "CS2-CS24: CS Channels\n");
+    for ( char **p = helpChList; *p != NULL; p++ ) {
+      fprintf(stderr, "%s\n",*p);
+    }
+
+	fprintf(stderr, "C13-C63: CATV Channels\n");
+	fprintf(stderr, "CS2-CS24: CS Channels\n");
+	fprintf(stderr, "BS1_0-BS23_1: BS Channels(Transport)\n");
 }
 
 
