@@ -916,7 +916,9 @@ main(int argc, char **argv)
 
         if(use_http){    // http-server add-
             char header[] =  "HTTP/1.1 200 OK\r\nContent-Type: application/octet-stream\r\nCache-Control: no-cache\r\n\r\n";
-            write(connected_socket, header, strlen(header));
+            if ( write(connected_socket, header, strlen(header)) == -1 ) {
+              fprintf(stderr, "write error\n");
+            }
 
             //set write target to http
             tdata.wfd = connected_socket;
