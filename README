@@ -1,3 +1,29 @@
+
+本プログラムは、stz2012/recpt1 (https://github.com/stz2012/recpt1)のフォークで、
+その目的は raspirec Ver1.3.0(https://github.com/kaikoma-soft/raspirec)
+に必要な改造＋おまけを施したものです。
+
+変更点は次のものです。
+
+ * --sid オプションで、EPGを指定しても、Rescan ID が起きると、それ以降の
+   EPGデータが出力されなくなるバグ(?) の修正
+ * コンパイル時の警告を無くす。
+
+インストール方法は次の通りです。(あらかじめ libarib25 がインストールされている事)
+
+  % mkdir /tmp/recpt1 ; cd /tmp/recpt1
+  % git clone https://github.com/kaikoma-soft/recpt1.git .
+  % cd recpt1
+  % ./autogen.sh
+  % ./configure --enable-b25
+  % make 
+  % sudo make install
+  % make maintainer-cleanq
+
+
+以下はオリジナルの README
+------------------------------------------------------
+
 【recpt1 HTTPサーバ版RC4 + α（STZ版）】
 Linux用PT1/PT2/PT3録画プログラムです。
 こちらは亜流版ですのでご注意下さい。
