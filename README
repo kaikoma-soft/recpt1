@@ -21,7 +21,7 @@
   % ./configure --enable-b25
   % make 
   % sudo make install
-  % make maintainer-cleanq
+  % make maintainer-clean
 
 
 以下はオリジナルの README
