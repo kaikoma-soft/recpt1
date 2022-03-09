@@ -55,7 +55,7 @@ searchrecoff(char *channel)
                 if(*++bs_ch == '\0' && slot < ISDB_T_SLOT_LIMIT) {
                     isdb_t_conv_set.set_freq = node / 2;
                     isdb_t_conv_set.add_freq = slot;
-                    sprintf(bs_channel_buf, "BS%d_%d", node, slot);
+                    sprintf(bs_channel_buf, "BS%d_%d", (char)node, (char)slot);
                     return &isdb_t_conv_set;
                 }
             }
