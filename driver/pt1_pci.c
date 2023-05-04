@@ -32,6 +32,7 @@ typedef struct pm_message {
 } pm_message_t;
 #endif
 #endif
+
 #include <linux/kthread.h>
 #include <linux/dma-mapping.h>
 
@@ -56,6 +57,23 @@ typedef struct pm_message {
 
 #if LINUX_VERSION_CODE > KERNEL_VERSION(4,2,0)
 #include <linux/vmalloc.h>
+#endif
+
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(5,18,0)
+static inline void *pci_alloc_consistent(struct pci_dev *hwdev, size_t size, dma_addr_t *dma_handle)
+{
+	return dma_alloc_coherent(&hwdev->dev, size, dma_handle, GFP_KERNEL);
+}
+
+static inline void pci_free_consistent(struct pci_dev *hwdev, size_t size, void *vaddr, dma_addr_t dma_handle)
+{
+	dma_free_coherent(&hwdev->dev, size, vaddr, dma_handle);
+}
+
+static inline int pci_set_dma_mask(struct pci_dev *hwdev, u64 mask)
+{
+	return dma_set_mask(&hwdev->dev, mask);
+}
 #endif
 
 /* These identify the driver base version and may not be removed. */
@@ -404,12 +422,13 @@ static int pt1_release(struct inode *inode, struct file *file)
 		channel->req_dma = FALSE ;
 		wake_up(&channel->ptr->dma_wait_q);
 	}
-	mutex_unlock(&channel->ptr->lock);
 
 	/* send tuner to sleep */
 	set_sleepmode(channel->ptr->regs, &channel->lock,
 				  channel->address, channel->type, TYPE_SLEEP);
 	schedule_timeout_interruptible(msecs_to_jiffies(100));
+
+	mutex_unlock(&channel->ptr->lock);
 
 	return 0;
 }
