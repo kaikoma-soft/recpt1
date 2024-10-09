@@ -33,7 +33,8 @@ ISDB_T_FREQ_CONV_TABLE    isdb_t_conv_table[] = {
     { BS_01, CHTYPE_SATELLITE, 2, "171"},  /* BSテレ東 */
     { BS_01, CHTYPE_SATELLITE, 2, "172"},  /* BSテレ東2 */
     { BS_03, CHTYPE_SATELLITE, 0, "191"},  /* WOWOWプライム */
-    { BS_03, CHTYPE_SATELLITE, 1, "103"},  /* NHK */
+    { BS_03, CHTYPE_SATELLITE, 1, "236"},  /* BSアニマックス */
+    { BS_03, CHTYPE_SATELLITE, 2, "251"},  /* BS釣りビジョン */
     { BS_05, CHTYPE_SATELLITE, 0, "192"},  /* WOWOWライブ */
     { BS_05, CHTYPE_SATELLITE, 1, "193"},  /* WOWOWシネマ */
     { BS_09, CHTYPE_SATELLITE, 0, "211"},  /* BS11イレブン */
@@ -41,18 +42,15 @@ ISDB_T_FREQ_CONV_TABLE    isdb_t_conv_table[] = {
     { BS_11, CHTYPE_SATELLITE, 2, "231"},  /* 放送大学テレビ */
     { BS_11, CHTYPE_SATELLITE, 2, "232"},  /* 放送大学テレビ */
     { BS_11, CHTYPE_SATELLITE, 2, "531"},  /* 放送大学ラジオ */
-    { BS_11, CHTYPE_SATELLITE, 3, "251"},  /* BS釣りビジョン */
     { BS_13, CHTYPE_SATELLITE, 0, "141"},  /* BS日テレ */
     { BS_13, CHTYPE_SATELLITE, 0, "142"},  /* BS日テレ */
     { BS_13, CHTYPE_SATELLITE, 1, "181"},  /* BSフジ・181 */
     { BS_13, CHTYPE_SATELLITE, 1, "182"},  /* BSフジ・182 */
-    { BS_13, CHTYPE_SATELLITE, 2, "236"},  /* BSアニマックス */
     { BS_15, CHTYPE_SATELLITE, 0, "101"},  /* NHK BS */
     { BS_15, CHTYPE_SATELLITE, 0, "102"},  /* NHK BS */
     { BS_15, CHTYPE_SATELLITE, 1, "200"},  /* スターチャンネル */
     { BS_15, CHTYPE_SATELLITE, 1, "800"},  /* スターチャンネル */
     { BS_19, CHTYPE_SATELLITE, 0, "245"},  /* J SPORTS 4 */
-    { BS_19, CHTYPE_SATELLITE, 0, "849"},  /* スカパー！ガイド */
     { BS_19, CHTYPE_SATELLITE, 1, "242"},  /* J SPORTS 1 */
     { BS_19, CHTYPE_SATELLITE, 2, "243"},  /* J SPORTS 2 */
     { BS_19, CHTYPE_SATELLITE, 3, "244"},  /* J SPORTS 3 */
@@ -198,7 +196,6 @@ ISDB_T_FREQ_CONV_TABLE    isdb_t_conv_table[] = {
 char *helpChList[] = {
 	"101 ch : NHK BS",
 	"102 ch : NHK BS",
-	"103 ch : NHK",
 	"141 ch : BS日テレ",
 	"142 ch : BS日テレ",
 	"151 ch : BS朝日1",
@@ -231,7 +228,6 @@ char *helpChList[] = {
 	"265 ch : BSよしもと",
 	"531 ch : 放送大学ラジオ",
 	"800 ch : スターチャンネル",
-	"849 ch : スカパー！ガイド",
 	"",
 	" 55 ch : ショップチャンネル",
 	"101 ch : スカパー！インフォ",
@@ -291,5 +287,5 @@ char *helpChList[] = {
 	NULL,
 };
 
-// created by mkChConvTable.rb (2024-06-07 16:50:05 +0900)
-// BS = 36, CS = 55
+// created by mkChConvTable.rb (2024-10-09 13:18:15 +0900)
+// BS = 34, CS = 55
