@@ -3,6 +3,11 @@
 #define _PT1_DEV_H_
 
 char *bsdev[NUM_BSDEV] = {
+    "/dev/isdb6014video0",
+    "/dev/isdb6014video1",
+    "/dev/isdb6014video2",
+    "/dev/isdb6014video3",
+
     "/dev/pt1video1",
     "/dev/pt1video0",
     "/dev/pt1video5",
@@ -95,6 +100,11 @@ char *bsdev[NUM_BSDEV] = {
     "/dev/px5-DTV31"
 };
 char *isdb_t_dev[NUM_ISDB_T_DEV] = {
+    "/dev/isdb6014video0",
+    "/dev/isdb6014video1",
+    "/dev/isdb6014video2",
+    "/dev/isdb6014video3",
+    
     "/dev/pt1video2",
     "/dev/pt1video3",
     "/dev/pt1video6",
