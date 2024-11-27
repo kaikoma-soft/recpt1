@@ -43,6 +43,7 @@
   % sudo make install
   % make maintainer-clean
 
+動作確認環境は Ubuntu 24.04.1 LTS (6.8.0-49-generic) です。
 
 以下はオリジナルの README
 ------------------------------------------------------
