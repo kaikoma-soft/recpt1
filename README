@@ -46,6 +46,9 @@
   % sudo make install
   % make maintainer-clean
 
+( 上記スクリプトは https://gist.github.com/kaikoma-soft/252e623b1f8937e8a091dbda9695bed1#file-recpt1_install-sh )
+
+
 動作確認環境は Ubuntu 24.04.1 LTS (6.8.0-49-generic) です。
 
 以下はオリジナルの README
