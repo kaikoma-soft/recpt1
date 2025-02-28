@@ -31,16 +31,13 @@ ISDB_T_FREQ_CONV_TABLE    isdb_t_conv_table[] = {
     { BS_01, CHTYPE_SATELLITE, 1, "161"},  /* BS-TBS */
     { BS_01, CHTYPE_SATELLITE, 1, "162"},  /* BS-TBS */
     { BS_01, CHTYPE_SATELLITE, 2, "171"},  /* BSテレ東 */
-    { BS_01, CHTYPE_SATELLITE, 2, "172"},  /* BSテレ東2 */
-    { BS_01, CHTYPE_SATELLITE, 2, "777"},  /* 株価情報 */
     { BS_03, CHTYPE_SATELLITE, 0, "191"},  /* WOWOWプライム */
-    { BS_03, CHTYPE_SATELLITE, 0, "791"},  /* ご案内チャンネル */
     { BS_03, CHTYPE_SATELLITE, 1, "236"},  /* BSアニマックス */
     { BS_03, CHTYPE_SATELLITE, 2, "251"},  /* BS釣りビジョン */
     { BS_05, CHTYPE_SATELLITE, 0, "192"},  /* WOWOWライブ */
     { BS_05, CHTYPE_SATELLITE, 1, "193"},  /* WOWOWシネマ */
     { BS_09, CHTYPE_SATELLITE, 0, "211"},  /* BS11イレブン */
-    { BS_09, CHTYPE_SATELLITE, 2, "222"},  /* BS12トゥエルビ */
+    { BS_09, CHTYPE_SATELLITE, 1, "222"},  /* BS12トゥエルビ */
     { BS_13, CHTYPE_SATELLITE, 0, "141"},  /* BS日テレ */
     { BS_13, CHTYPE_SATELLITE, 0, "142"},  /* BS日テレ */
     { BS_13, CHTYPE_SATELLITE, 1, "181"},  /* BSフジ・181 */
@@ -54,6 +51,7 @@ ISDB_T_FREQ_CONV_TABLE    isdb_t_conv_table[] = {
     { BS_15, CHTYPE_SATELLITE, 1, "800"},  /* BS10スターch */
     { BS_15, CHTYPE_SATELLITE, 2, "200"},  /* BS10 */
     { BS_19, CHTYPE_SATELLITE, 0, "245"},  /* J SPORTS 4 */
+    { BS_19, CHTYPE_SATELLITE, 0, "849"},  /* スカパー！ガイド */
     { BS_19, CHTYPE_SATELLITE, 1, "242"},  /* J SPORTS 1 */
     { BS_19, CHTYPE_SATELLITE, 2, "243"},  /* J SPORTS 2 */
     { BS_19, CHTYPE_SATELLITE, 3, "244"},  /* J SPORTS 3 */
@@ -62,7 +60,7 @@ ISDB_T_FREQ_CONV_TABLE    isdb_t_conv_table[] = {
     { BS_21, CHTYPE_SATELLITE, 2, "234"},  /* グリーンチャンネル */
     { BS_23, CHTYPE_SATELLITE, 0, "256"},  /* ディズニーch */
     { BS_23, CHTYPE_SATELLITE, 1, "265"},  /* BSよしもと */
-    { BS_23, CHTYPE_SATELLITE, 3, "260"},  /* BS松竹東急 */
+    { BS_23, CHTYPE_SATELLITE, 2, "260"},  /* BS松竹東急 */
 
     {  12, CHTYPE_SATELLITE, 0, "CS2"},  /* ND2  */
     {  13, CHTYPE_SATELLITE, 0, "CS4"},  /* ND4  */
@@ -97,7 +95,6 @@ ISDB_T_FREQ_CONV_TABLE    isdb_t_conv_table[] = {
     { CS_08, CHTYPE_SATELLITE, 0, "318" },  /* Mnet */
     { CS_08, CHTYPE_SATELLITE, 0, "349" },  /* 日テレNEWS24 */
     { CS_08, CHTYPE_SATELLITE, 0, "55"  },  /* ショップチャンネル */
-    { CS_10, CHTYPE_SATELLITE, 0, "101" },  /* スカパー！インフォ */
     { CS_10, CHTYPE_SATELLITE, 0, "219" },  /* 衛星劇場 */
     { CS_10, CHTYPE_SATELLITE, 0, "317" },  /* KBS World */
     { CS_10, CHTYPE_SATELLITE, 0, "800" },  /* スポーツライブ＋ */
@@ -204,7 +201,6 @@ char *helpChList[] = {
 	"161 ch : BS-TBS",
 	"162 ch : BS-TBS",
 	"171 ch : BSテレ東",
-	"172 ch : BSテレ東2",
 	"181 ch : BSフジ・181",
 	"182 ch : BSフジ・182",
 	"191 ch : WOWOWプライム",
@@ -229,12 +225,10 @@ char *helpChList[] = {
 	"260 ch : BS松竹東急",
 	"265 ch : BSよしもと",
 	"531 ch : 放送大学ラジオ",
-	"777 ch : 株価情報",
-	"791 ch : ご案内チャンネル",
 	"800 ch : BS10スターch",
+	"849 ch : スカパー！ガイド",
 	"",
 	" 55 ch : ショップチャンネル",
-	"101 ch : スカパー！インフォ",
 	"161 ch : QVC",
 	"218 ch : 東映チャンネル",
 	"219 ch : 衛星劇場",
@@ -291,5 +285,5 @@ char *helpChList[] = {
 	NULL,
 };
 
-// created by mkChConvTable.rb (2025-01-11 11:22:44 +0900)
-// BS = 36, CS = 55
+// created by mkChConvTable.rb (2025-02-28 20:36:05 +0900)
+// BS = 34, CS = 54
