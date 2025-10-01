@@ -48,8 +48,7 @@ ISDB_T_FREQ_CONV_TABLE    isdb_t_conv_table[] = {
     { BS_13, CHTYPE_SATELLITE, 2, "531"},  /* 放送大学ラジオ */
     { BS_15, CHTYPE_SATELLITE, 0, "101"},  /* NHK BS */
     { BS_15, CHTYPE_SATELLITE, 0, "102"},  /* NHK BS */
-    { BS_15, CHTYPE_SATELLITE, 1, "201"},  /* BS10スターch */
-    { BS_15, CHTYPE_SATELLITE, 1, "800"},  /* BS10スターch */
+    { BS_15, CHTYPE_SATELLITE, 1, "201"},  /* BS10プレミアム */
     { BS_15, CHTYPE_SATELLITE, 2, "200"},  /* BS10 */
     { BS_19, CHTYPE_SATELLITE, 0, "245"},  /* J SPORTS 4 */
     { BS_19, CHTYPE_SATELLITE, 1, "242"},  /* J SPORTS 1 */
@@ -208,7 +207,7 @@ char *helpChList[] = {
 	"192 ch : WOWOWライブ",
 	"193 ch : WOWOWシネマ",
 	"200 ch : BS10",
-	"201 ch : BS10スターch",
+	"201 ch : BS10プレミアム",
 	"211 ch : BS11イレブン",
 	"222 ch : BS12トゥエルビ",
 	"231 ch : 放送大学テレビ",
@@ -226,7 +225,6 @@ char *helpChList[] = {
 	"260 ch : J：COM BS",
 	"265 ch : BSよしもと",
 	"531 ch : 放送大学ラジオ",
-	"800 ch : BS10スターch",
 	"",
 	" 55 ch : ショップチャンネル",
 	"161 ch : QVC",
@@ -285,5 +283,5 @@ char *helpChList[] = {
 	NULL,
 };
 
-// created by mkChConvTable.rb (2025-07-01 12:11:01 +0900)
-// BS = 34, CS = 54
+// created by mkChConvTable.rb (2025-10-01 12:11:00 +0900)
+// BS = 33, CS = 54
